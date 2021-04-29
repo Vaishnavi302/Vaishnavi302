@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name ="viewport" content="width=device-width,initial scale =1.0">
+        <meta http-equiv="X-UA-Compatible" content ="ie=edge">
+        <meta name="description" content="This is description">
+        <meta name="keywords" content="html,html tutorials, web development">
+        <meta name="robots" content="INDEX,FOLLOW">
+        <title>Forms</title>
+    </head>
+    <body>
+        <h2>This is HTML forms tutorials</h2>
+        <form action ="backend.php">
+            <div>
+                Name:<input type ="text" name="myName">
+            </div>
+            <br>
+            <div>
+                Role: <input type ="text" name="myRole">
+            </div>
+            <br>
+            <div>
+                Email: <input type ="email" name="myEmail">
+            </div>
+            <br>
+            
+            <div>
+                Date: <input type="date" name="myDate">
+            </div>
+            <br>
+            <div>
+                Bonus: <input type="number" name="myBonus">
+            </div>
+            <br>
+            <div>
+                Are you eligible ?:<input type="checkbox" name="myEligibility">
+            </div>
+            <br>
+            <div>
+                Gender: Male<input type="radio" name="myGender" > Female <input type="radio" name="myGender">Others<input type="radio" name="myGender">
+            </div>
+            <br>
+            <div>
+                Write about yourself: <br><textarea name="myText" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <label for="car">Car</label>
+                <select name = "my Car" id="car">
+                    <option value ="ind">Indica </option>
+                    <option value ="swf" selected>Swift</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="submit"  value="Submit now">
+                <input type="reset"  value="Reset now">
+            </div>
+
+        </form>
+    </body>
