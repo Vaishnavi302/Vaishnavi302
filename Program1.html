@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harry Fitness</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* CSS Reset */
+    body {
+        font-family: 'Baloo Bhai', cursive;
+        color: white;
+        margin: auto;
+        padding: 20px;
+        background: url('https://images.pexels.com/photos/28054/pexels-photo-28054.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    }
+
+    .left {
+        display: inline-block;
+        /* border: 2px solid red;*/
+        position: absolute;
+        left: 60px;
+        top: 20px;
+    }
+
+    .left img {
+        width: 136px;
+        filter: invert(100%);
+    }
+
+    .left div {
+        line-height: 19px;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .mid {
+        display: block;
+        width: 36%;
+        margin: 29px auto;
+        /* border: 2px solid green; */
+    }
+
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 43px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: grey;
+
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(31, 30, 30);
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 106px 80px;
+        padding: 75px;
+        width: 33%;
+        border-radius: 28px;
+    }
+
+    .form-group input {
+        font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .container button {
+        display: block;
+        width: 74%;
+        margin: 20px auto;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="data:image/png;base64,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"
+                alt="">
+            <div>Harry Fitness</div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Delhi now</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email Id">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
